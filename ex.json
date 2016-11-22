@@ -1,0 +1,42 @@
+"children": [
+    {
+        "name": "name",
+        "birthday": "dd.mm.yyyy",
+        "nameFather": "name",
+        "nameMother": "name",
+        "siblings": "amount",
+        "nationality": "nationality",
+        "avatar": "http://imageURL",
+        "information": "text",
+        "pictures": [
+            {
+                "url": "http://imageURL",
+                "figcaption": "Bildunterschrift 1"
+            },
+            {
+                "url": "http://imageURL",
+                "figcaption": "Bildunterschrift 2"
+            }
+        ]
+    },
+    {
+        "name": "name",
+        "birthday": "dd.mm.yyyy",
+        "nameFather": "name",
+        "nameMother": "name",
+        "siblings": "amount",
+        "nationality": "nationality",
+        "avatar": "http://imageURL",
+        "information": "text",
+        "pictures": [
+            {
+                "url": "http://imageURL",
+                "figcaption": "Bildunterschrift 1"
+            },
+            {
+                "url": "http://imageURL",
+                "figcaption": "Bildunterschrift 2"
+            }
+        ]
+    }
+]
