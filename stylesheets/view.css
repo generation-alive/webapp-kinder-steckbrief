@@ -1,0 +1,161 @@
+@media screen {
+  /* line 2, ../sass/view.sass */
+  .inv-invoice {
+    background: #ffd89b;
+    /* fallback for old browsers */
+    background: -webkit-linear-gradient(to left, #ffd89b, #19547b);
+    /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to left, #ffd89b, #19547b);
+    /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+
+     * background-attachment: fixed */
+    min-height: 100vh;
+    width: 100%;
+  }
+
+  /* line 22, ../sass/view.sass */
+  .inv-invoice__paper {
+    margin: 20px auto;
+    box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16), 0 3px 6px rgba(0, 0, 0, 0.23);
+  }
+
+  /* line 1, ../sass/style/_inv-menu.sass */
+  .inv-menu {
+    float: left;
+    overflow: auto;
+    width: 30%;
+    height: 100vh;
+    background-color: rgba(8, 26, 38, 0.6);
+    padding: 10px 20px;
+    box-sizing: border-box;
+  }
+
+  /* line 10, ../sass/style/_inv-menu.sass */
+  .inv-menu__headline {
+    overflow: auto;
+    color: #ffd89b;
+  }
+
+  /* line 3, ../sass/style/_form.sass */
+  .group {
+    position: relative;
+    margin-bottom: 45px;
+    width: 100%;
+    box-sizing: border-box;
+  }
+
+  /* line 9, ../sass/style/_form.sass */
+  input {
+    color: #fff;
+    background-color: transparent;
+    box-sizing: border-box;
+    width: 100%;
+    font-size: 18px;
+    padding: 10px 10px 10px 5px;
+    display: block;
+    border: none;
+    border-bottom: 1px solid #757575;
+  }
+  /* line 19, ../sass/style/_form.sass */
+  input:focus {
+    outline: none;
+  }
+
+  /* LABEL ======================================= */
+  /* line 24, ../sass/style/_form.sass */
+  label {
+    color: #999;
+    font-size: 18px;
+    font-weight: normal;
+    position: absolute;
+    pointer-events: none;
+    left: 0px;
+    top: 10px;
+    transition: 0.2s ease all;
+    -moz-transition: 0.2s ease all;
+    -webkit-transition: 0.2s ease all;
+  }
+
+  /* active state */
+  /* line 39, ../sass/style/_form.sass */
+  input:focus ~ label, input:valid ~ label {
+    top: -20px;
+    font-size: 14px;
+    color: #ffd89b;
+  }
+
+  /* BOTTOM BARS ================================= */
+  /* line 46, ../sass/style/_form.sass */
+  .bar {
+    box-sizing: border-box;
+    position: relative;
+    display: block;
+    width: 100%;
+  }
+  /* line 51, ../sass/style/_form.sass */
+  .bar:before, .bar:after {
+    content: "";
+    height: 2px;
+    width: 0;
+    bottom: 1px;
+    position: absolute;
+    background: #ffd89b;
+    transition: 0.2s ease all;
+    -moz-transition: 0.2s ease all;
+    -webkit-transition: 0.2s ease all;
+  }
+
+  /* active state */
+  /* line 65, ../sass/style/_form.sass */
+  input:focus ~ .bar:before, input:focus ~ .bar:after {
+    width: 100%;
+  }
+
+  /* HIGHLIGHTER ================================== */
+  /* line 70, ../sass/style/_form.sass */
+  .highlight {
+    position: absolute;
+    height: 60%;
+    width: 100%;
+    top: 25%;
+    left: 0;
+    pointer-events: none;
+    opacity: 0.5;
+  }
+
+  /* active state */
+  /* line 81, ../sass/style/_form.sass */
+  input:focus ~ .highlight {
+    -webkit-animation: inputHighlighter 0.3s ease;
+    -moz-animation: inputHighlighter 0.3s ease;
+    animation: inputHighlighter 0.3s ease;
+  }
+
+  /* ANIMATIONS ================ */
+  @-webkit-keyframes inputHighlighter {
+    from {
+      background: #ffd89b;
+    }
+    to {
+      width: 0;
+      background: transparent;
+    }
+  }
+  @-moz-keyframes inputHighlighter {
+    from {
+      background: #ffd89b;
+    }
+    to {
+      width: 0;
+      background: transparent;
+    }
+  }
+  @keyframes inputHighlighter {
+    from {
+      background: #ffd89b;
+    }
+    to {
+      width: 0;
+      background: transparent;
+    }
+  }
+}
