@@ -1,6 +1,7 @@
 "children": [
     {
         "name": "name",
+        "gender": "male",
         "birthday": "dd.mm.yyyy",
         "nameFather": "name",
         "nameMother": "name",
@@ -21,6 +22,7 @@
     },
     {
         "name": "name",
+        "gender": "female",
         "birthday": "dd.mm.yyyy",
         "nameFather": "name",
         "nameMother": "name",
