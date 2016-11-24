@@ -9,10 +9,6 @@ const button = document.getElementById('button');
 
 loadJSON('data/children.json');
 
-button.addEventListener("click", function(){
-    loadJSON('data/example2.json');
-});
-
 function loadJSON(file) {
     var xobj = new XMLHttpRequest();
         xobj.overrideMimeType("application/json");
@@ -20,15 +16,6 @@ function loadJSON(file) {
         xobj.onreadystatechange = function () {
             if (xobj.readyState == 4 && xobj.status == "200") {
                 var data = JSON.parse(xobj.responseText);
-
-                data.total = 0;
-
-                for (var i=0; i<data.services.length; i++) {
-                    data.services[i].position = i+1;
-                    data.services[i].total = data.services[i].hours*data.services[i].fee;
-                    data.total += data.services[i].total;
-                }
-
                 ReactDOM.render(<Layout data={data}/>, app);
             }
         };
