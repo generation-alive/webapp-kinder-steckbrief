@@ -1,0 +1,94 @@
+$blue: #3F849D
+
+h1
+    text-transform: uppercase
+    font-weight: 500
+    font-size: 25pt
+    float: left
+
+h2
+    font-weight: normal
+    padding-top: 12pt
+    margin-bottom: 5pt
+    color: #333
+    font-size: 17pt
+
+.sb-main, .sb-header
+    overflow-x: auto
+    box-sizing: border-box
+    width: 100%
+
+.sb-logo
+    width: 4.5cm
+    padding-right: 0.3cm
+    float: right
+
+.sb-table
+    //width: 100%
+    display: flex
+    border: solid 4pt $blue
+    font-family: "SintonyRegular"
+    font-size: 11pt
+    border-radius: 2pt
+    color: $blue
+
+.sb-table__left
+    background-color: $blue
+    color: #fff
+    font-family: "SintonyBold"
+    width: 4cm
+
+.sb-table__mid
+    flex-basis: calc(100% - 9cm)
+
+.sb-table__right
+    width: 5.0cm
+    background-image: url("../gfx/bsp.jpg")
+    background-size: cover
+    background-position: center center
+    //border-left: 3pt solid $blue
+
+.sb-table__list
+    margin: 6pt
+    margin-right: 0
+    li
+        padding-right: 7pt
+        padding-left: 3pt
+        padding-bottom: 3pt
+        padding-top: 8pt
+        border-bottom: solid 2pt rgba(#fff, 0.8)
+        &:first-child
+            padding-top: 4pt
+        &:last-child
+            border: none
+            padding-bottom: 0
+
+.sb-table__list--mid
+    margin-left: 0
+    li
+        padding-left: 6pt
+        border-color: rgba($blue, 0.8)
+
+.sb-description
+    width: calc(100% - 5cm - 3pt - 0.5cm)
+    font-size: 10pt
+    line-height: 14pt
+    color: darken($blue, 10%)
+    float: left
+    text-align: justify
+
+.sb-aside
+    float: right
+    width: 5cm
+    padding-right: 2pt
+    overflow: hidden
+
+.sb-aside__image
+    margin: 0
+    margin-bottom: 1cm
+    width: 100%
+    img
+        width: 100%
+
+    figcaption
+        font-size: 8pt

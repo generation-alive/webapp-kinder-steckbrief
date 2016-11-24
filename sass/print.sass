@@ -1,11 +1,20 @@
 @import url('https://fonts.googleapis.com/css?family=Roboto:300,400,500,700')
 @import url('https://fonts.googleapis.com/css?family=Source+Sans+Pro:400,600')
 
-$paper-padding-top: 1cm
-$paper-padding-left: 3cm
+@font-face
+    font-family: ArmataRegular
+    src: url("../sass/font/Armata-Regular.otf") format("opentype")
 
-h1
-    font-family: 'Source Sans Pro', sans-serif
+@font-face
+    font-family: SintonyRegular
+    src: url("../sass/font/Sintony-Regular.otf") format("opentype")
+
+@font-face
+    font-family: SintonyBold
+    src: url("../sass/font/Sintony-Bold.otf") format("opentype")
+
+$paper-padding-top: 1cm
+$paper-padding-left: 2cm
 
 ul
     margin: 0
@@ -13,7 +22,7 @@ ul
     list-style: none
 
 .inv-invoice
-    font-family: 'Roboto', sans-serif
+    font-family: 'ArmataRegular', sans-serif
     color: #222
 
 .inv-invoice
@@ -29,6 +38,7 @@ ul
     padding: $paper-padding-top 0
     box-sizing: border-box
     position: relative
+    padding: $paper-padding-top $paper-padding-left
 
 .inv-list--right
     text-align: right
@@ -72,6 +82,7 @@ ul
     .inv-menu
         display: none
 
-@import comp/header
-@import comp/letter
-@import comp/footer
+@import steckbrief
+//@import comp/header
+//@import comp/letter
+//@import comp/footer
