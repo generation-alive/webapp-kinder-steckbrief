@@ -1,26 +1,39 @@
 /*jshint esversion: 6*/
 import React from "react";
-//import InvoiceHeader from "./InvoiceHeader";
-//import InvoiceFooter from "./InvoiceFooter";
-//import Introduction from "./letter/Introduction";
-//import Total from "./letter/Total";
-//import Table from "./letter/Table";
-//import LetterEnd from "./letter/LetterEnd";
-
-import ConfigStore from "../../stores/ConfigStore";
-import ServicesStore from "../../stores/ServicesStore";
 
 export default class Steckbrief extends React.Component {
     render() {
+        var data = this.props.data;
+        var asideImages = [];
+
+        for (var i=0; i<data.pictures.length; i++) {
+            asideImages[i] =
+            <figure key={i} class="sb-aside__image">
+                <img src={data.pictures[i].url} alt={i} />
+                <figcaption>{data.pictures[i].figcaption}</figcaption>
+            </figure>;
+        }
+
+        var style = {
+            backgroundImage: "url('"+data.avatar+"')"
+        };
+
+        if (data.gender === "male") {
+            data.gender = "Junge";
+        }
+        else if (data.gender === "female") {
+            data.gender = "Mädchen";
+        }
+
         return (
             <article class="inv-invoice__paper">
                 <header class="sb-header">
-                    <h1>Akash Dehuri</h1>
+                    <h1>{data.name}</h1>
                     <img class="sb-logo" src="gfx/ga_logo.png" alt="Generation Alive"/>
                 </header>
                 <main class="sb-main">
                     <div class="sb-table">
-                        <div class="sb-table__right">
+                        <div class="sb-table__right" style={style}>
 
                         </div>
                         <div class="sb-table__left">
@@ -36,13 +49,13 @@ export default class Steckbrief extends React.Component {
                         </div>
                         <div class="sb-table__mid">
                             <ul class="sb-table__list sb-table__list--mid">
-                                <li>Akash Dehuri</li>
-                                <li>Mädchen</li>
-                                <li>00.00.0000</li>
-                                <li>Name des Vater</li>
-                                <li>Name der Mutter</li>
-                                <li>Geschwister</li>
-                                <li>indisch</li>
+                                <li>{data.name}</li>
+                                <li>{data.gender}</li>
+                                <li>{data.birthday}</li>
+                                <li>{data.nameFather}</li>
+                                <li>{data.nameMother}</li>
+                                <li>{data.siblings}</li>
+                                <li>{data.nationality}</li>
                             </ul>
                         </div>
 
@@ -50,17 +63,10 @@ export default class Steckbrief extends React.Component {
 
                     <h2>Hintergrundinformationen:</h2>
                         <div class="sb-description">
-                            Akash Dehuri stammt aus einem abgelegenen Dorf namens „Go-dipokhori“  im  Bezirk  rund  um  Khordha.  Khordha  liegt  im  Osten  Indiens,  im  Bundesstaat  Odisha.  In  dem  Dorf  Godipokhori  leben  insgesamt  130  Familien,  davon  gehören  etwa  50  Familien  der  Stammesbevölkerung, der so genannten Adivasi, an. Die Adivasi, in Indien auch als „Sheduled Tribes“ bezeichnet, sind eine Minderheit von 7% der indischen Bevölkerung und leben als Ausge-stoßene meist in Slums oder sehr ländlichen Gebieten. Sie gehören zusammen mit der Kaste der Unberührbaren (Dalits) zu den ärmsten Menschen in Indien. Auch in diesem Dorf werden die Mitglieder der genannten Kaste als  Ausgestoßene  benachteiligt  und  leben  isoliert  von  den  übrigen  Dorfbewohnern  in  einer  entlegenen  Straße.  In  dieser  fast  ausweglosen Situation für die ärmsten der Armen in Indien leben diese  50  Familien  bereits  unter  der  Armutsgrenze.  Es  gibt  kein  Krankenhaus  und  keine  Schule  in  ihrer  Nähe,  geschweige  denn  fließendes Wasser oder befestigte Straßen. Die meisten der Dorf-bewohner  sind  Analphabeten  und  kämpfen  als Tagelöhner um  die Versorgung ihrer Familien. Doch nicht nur die wirtschaftliche und soziale Situation ist schier hoffnungslos, auch in geistlicher Hinsicht herrscht in Dörfern wie Godipokhori  eine  große  Armut.  Viele  der  Familien  sind  Hinduis-ten, oder als Stammesmitglieder Animisten. Sie glauben, dass die Natur eine Seele hat, sie beten Tiere, Bäume, Wasser, Felsen, usw. als Gottheit an. In diesem Dorf leben nur 10 christliche Familien.Akash Dehuri lebt als Ausgestoßener in diesem Dorf und gehört damit auch zu den besonders bedürftigen Kindern. Sein Vater ist Tagelöhner  und  hat  auch  nicht  immer  Arbeit.  Akashs  Bruder  ist  blind, dadurch hat es die Familie besonders schwer in diesem so feindseligen Umfeld zurechtzukommen.
+                            {data.information}
                         </div>
                         <div class="sb-aside">
-                            <figure class="sb-aside__image">
-                                <img src="gfx/aside-img1.jpg" alt="Bild 1" />
-                                <figcaption>Bildunterschrift 1</figcaption>
-                            </figure>
-                            <figure class="sb-aside__image">
-                                <img src="gfx/aside-img2.jpg" alt="Bild 2" />
-                                <figcaption>Bildunterschrift 2</figcaption>
-                            </figure>
+                            {asideImages}
                         </div>
                     </main>
                 </article>

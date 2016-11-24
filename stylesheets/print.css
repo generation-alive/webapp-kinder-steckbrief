@@ -159,7 +159,7 @@ h2 {
 /* line 44, ../sass/steckbrief.sass */
 .sb-table__right {
   width: 5cm;
-  background-image: url("../gfx/bsp.jpg");
+  background-image: url("../gfx/err.jpg");
   background-size: cover;
   background-position: center center;
 }
