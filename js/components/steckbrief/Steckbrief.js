@@ -44,7 +44,7 @@ export default class Steckbrief extends React.Component {
                                 <li>Name des Vaters:</li>
                                 <li>Name der Mutter:</li>
                                 <li>Geschwister:</li>
-                                <li>Nationalität:</li>
+                                <li>Referenznummer:</li>
                             </ul>
                         </div>
                         <div class="sb-table__mid">
@@ -55,7 +55,7 @@ export default class Steckbrief extends React.Component {
                                 <li>{data.nameFather}</li>
                                 <li>{data.nameMother}</li>
                                 <li>{data.siblings}</li>
-                                <li>{data.nationality}</li>
+                                <li>{data.id}</li>
                             </ul>
                         </div>
 
