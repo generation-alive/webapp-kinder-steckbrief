@@ -1,6 +1,9 @@
 @import url('https://fonts.googleapis.com/css?family=Roboto:300,400,500,700')
 @import url('https://fonts.googleapis.com/css?family=Source+Sans+Pro:400,600')
 
+@page
+    margin: 0
+
 @font-face
     font-family: ArmataRegular
     src: url("../sass/font/Armata-Regular.otf") format("opentype")
@@ -81,6 +84,13 @@ ul
 @media print
     .inv-menu
         display: none
+    *
+        -webkit-print-color-adjust: exact
+        background-color: unset
+        color: unset
+
+    .inv-invoice__paper
+        height: 100vh
 
 @import steckbrief
 //@import comp/header

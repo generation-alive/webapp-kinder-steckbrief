@@ -1,5 +1,8 @@
 @import url("https://fonts.googleapis.com/css?family=Roboto:300,400,500,700");
 @import url("https://fonts.googleapis.com/css?family=Source+Sans+Pro:400,600");
+@page {
+  margin: 0;
+}
 @font-face {
   font-family: ArmataRegular;
   src: url("../sass/font/Armata-Regular.otf") format("opentype");
@@ -12,26 +15,26 @@
   font-family: SintonyBold;
   src: url("../sass/font/Sintony-Bold.otf") format("opentype");
 }
-/* line 19, ../sass/print.sass */
+/* line 22, ../sass/print.sass */
 ul {
   margin: 0;
   padding: 0;
   list-style: none;
 }
 
-/* line 24, ../sass/print.sass */
+/* line 27, ../sass/print.sass */
 .inv-invoice {
   font-family: "ArmataRegular", sans-serif;
   color: #222;
 }
 
-/* line 28, ../sass/print.sass */
+/* line 31, ../sass/print.sass */
 .inv-invoice {
   overflow: auto;
   margin: 0;
 }
 
-/* line 32, ../sass/print.sass */
+/* line 35, ../sass/print.sass */
 .inv-invoice__paper {
   font-size: 12pt;
   overflow: auto;
@@ -44,22 +47,22 @@ ul {
   padding: 1cm 2cm;
 }
 
-/* line 43, ../sass/print.sass */
+/* line 46, ../sass/print.sass */
 .inv-list--right {
   text-align: right;
 }
 
-/* line 47, ../sass/print.sass */
+/* line 50, ../sass/print.sass */
 .inv-list--inline li {
   display: inline;
 }
 
-/* line 50, ../sass/print.sass */
+/* line 53, ../sass/print.sass */
 .inv-font--sm {
   font-size: 9pt;
 }
 
-/* line 54, ../sass/print.sass */
+/* line 57, ../sass/print.sass */
 .mark-top {
   left: 0;
   width: 0.4cm;
@@ -70,13 +73,13 @@ ul {
   margin-right: 0.5cm;
 }
 
-/* line 63, ../sass/print.sass */
+/* line 66, ../sass/print.sass */
 .mark--right {
   left: auto;
   right: 0;
 }
 
-/* line 67, ../sass/print.sass */
+/* line 70, ../sass/print.sass */
 .mark-mid {
   border-top: solid 1pt #999;
   width: 0.6cm;
@@ -85,24 +88,36 @@ ul {
   top: 50%;
 }
 
-/* line 74, ../sass/print.sass */
+/* line 77, ../sass/print.sass */
 .material-icons {
   vertical-align: middle;
 }
 
-/* line 77, ../sass/print.sass */
+/* line 80, ../sass/print.sass */
 .link-style {
   color: #ff7f94;
   font-weight: bold;
 }
 
 @media print {
-  /* line 82, ../sass/print.sass */
+  /* line 85, ../sass/print.sass */
   .inv-menu {
     display: none;
   }
+
+  /* line 87, ../sass/print.sass */
+  * {
+    -webkit-print-color-adjust: exact;
+    background-color: unset;
+    color: unset;
+  }
+
+  /* line 92, ../sass/print.sass */
+  .inv-invoice__paper {
+    height: 100vh;
+  }
 }
-/* line 3, ../sass/steckbrief.sass */
+/* line 3, ../sass/_steckbrief.sass */
 h1 {
   text-transform: uppercase;
   font-weight: 500;
@@ -110,7 +125,7 @@ h1 {
   float: left;
 }
 
-/* line 9, ../sass/steckbrief.sass */
+/* line 9, ../sass/_steckbrief.sass */
 h2 {
   font-weight: normal;
   padding-top: 12pt;
@@ -119,21 +134,21 @@ h2 {
   font-size: 17pt;
 }
 
-/* line 16, ../sass/steckbrief.sass */
+/* line 16, ../sass/_steckbrief.sass */
 .sb-main, .sb-header {
   overflow-x: auto;
   box-sizing: border-box;
   width: 100%;
 }
 
-/* line 21, ../sass/steckbrief.sass */
+/* line 21, ../sass/_steckbrief.sass */
 .sb-logo {
   width: 4.5cm;
   padding-right: 0.3cm;
   float: right;
 }
 
-/* line 26, ../sass/steckbrief.sass */
+/* line 26, ../sass/_steckbrief.sass */
 .sb-table {
   display: flex;
   border: solid 4pt #3F849D;
@@ -143,7 +158,7 @@ h2 {
   color: #3F849D;
 }
 
-/* line 35, ../sass/steckbrief.sass */
+/* line 35, ../sass/_steckbrief.sass */
 .sb-table__left {
   background-color: #3F849D;
   color: #fff;
@@ -151,12 +166,12 @@ h2 {
   width: 4cm;
 }
 
-/* line 41, ../sass/steckbrief.sass */
+/* line 41, ../sass/_steckbrief.sass */
 .sb-table__mid {
   flex-basis: calc(100% - 9cm);
 }
 
-/* line 44, ../sass/steckbrief.sass */
+/* line 44, ../sass/_steckbrief.sass */
 .sb-table__right {
   width: 5cm;
   background-image: url("../gfx/err.jpg");
@@ -164,12 +179,12 @@ h2 {
   background-position: center center;
 }
 
-/* line 51, ../sass/steckbrief.sass */
+/* line 51, ../sass/_steckbrief.sass */
 .sb-table__list {
   margin: 6pt;
   margin-right: 0;
 }
-/* line 54, ../sass/steckbrief.sass */
+/* line 54, ../sass/_steckbrief.sass */
 .sb-table__list li {
   padding-right: 7pt;
   padding-left: 3pt;
@@ -177,27 +192,27 @@ h2 {
   padding-top: 8pt;
   border-bottom: solid 2pt rgba(255, 255, 255, 0.8);
 }
-/* line 60, ../sass/steckbrief.sass */
+/* line 60, ../sass/_steckbrief.sass */
 .sb-table__list li:first-child {
   padding-top: 4pt;
 }
-/* line 62, ../sass/steckbrief.sass */
+/* line 62, ../sass/_steckbrief.sass */
 .sb-table__list li:last-child {
   border: none;
   padding-bottom: 0;
 }
 
-/* line 66, ../sass/steckbrief.sass */
+/* line 66, ../sass/_steckbrief.sass */
 .sb-table__list--mid {
   margin-left: 0;
 }
-/* line 68, ../sass/steckbrief.sass */
+/* line 68, ../sass/_steckbrief.sass */
 .sb-table__list--mid li {
   padding-left: 6pt;
   border-color: rgba(63, 132, 157, 0.8);
 }
 
-/* line 72, ../sass/steckbrief.sass */
+/* line 72, ../sass/_steckbrief.sass */
 .sb-description {
   width: calc(100% - 5cm - 3pt - 0.5cm);
   font-size: 10pt;
@@ -207,7 +222,7 @@ h2 {
   text-align: justify;
 }
 
-/* line 80, ../sass/steckbrief.sass */
+/* line 80, ../sass/_steckbrief.sass */
 .sb-aside {
   float: right;
   width: 5cm;
@@ -215,17 +230,17 @@ h2 {
   overflow: hidden;
 }
 
-/* line 86, ../sass/steckbrief.sass */
+/* line 86, ../sass/_steckbrief.sass */
 .sb-aside__image {
   margin: 0;
   margin-bottom: 1cm;
   width: 100%;
 }
-/* line 90, ../sass/steckbrief.sass */
+/* line 90, ../sass/_steckbrief.sass */
 .sb-aside__image img {
   width: 100%;
 }
-/* line 93, ../sass/steckbrief.sass */
+/* line 93, ../sass/_steckbrief.sass */
 .sb-aside__image figcaption {
   font-size: 8pt;
 }
