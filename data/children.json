@@ -3,13 +3,24 @@
         "id": 1,
         "name": "Akash Dehuri",
         "gender": "female",
-        "birthday": "dd.mm.yyyy",
-        "nameFather": "name",
-        "nameMother": "name",
-        "siblings": "2",
+        "birthday": "19.11.1995",
+        "family": [
+          "Peter Pan",
+          "Angela Merkel",
+          "Dieter",
+          "Susie"
+        ],
         "nationality": "indisch",
         "avatar": "gfx/bsp.jpg",
-        "information": "Akash Dehuri stammt aus einem abgelegenen Dorf namens „Go-dipokhori“  im  Bezirk  rund  um  Khordha.  Khordha  liegt  im  Osten  Indiens,  im  Bundesstaat  Odisha.  In  dem  Dorf  Godipokhori  leben  insgesamt  130  Familien,  davon  gehören  etwa  50  Familien  der  Stammesbevölkerung, der so genannten Adivasi, an. Die Adivasi, in Indien auch als „Sheduled Tribes“ bezeichnet, sind eine Minderheit von 7% der indischen Bevölkerung und leben als Ausge-stoßene meist in Slums oder sehr ländlichen Gebieten. Sie gehören zusammen mit der Kaste der Unberührbaren (Dalits) zu den ärmsten Menschen in Indien. Auch in diesem Dorf werden die Mitglieder der genannten Kaste als  Ausgestoßene  benachteiligt  und  leben  isoliert  von  den  übrigen  Dorfbewohnern  in  einer  entlegenen  Straße.  In  dieser  fast  ausweglosen Situation für die ärmsten der Armen in Indien leben diese  50  Familien  bereits  unter  der  Armutsgrenze.  Es  gibt  kein  Krankenhaus  und  keine  Schule  in  ihrer  Nähe,  geschweige  denn  fließendes Wasser oder befestigte Straßen. Die meisten der Dorf-bewohner  sind  Analphabeten  und  kämpfen  als Tagelöhner um  die Versorgung ihrer Familien. Doch nicht nur die wirtschaftliche und soziale Situation ist schier hoffnungslos, auch in geistlicher Hinsicht herrscht in Dörfern wie Godipokhori  eine  große  Armut.  Viele  der  Familien  sind  Hinduis-ten, oder als Stammesmitglieder Animisten. Sie glauben, dass die Natur eine Seele hat, sie beten Tiere, Bäume, Wasser, Felsen, usw. als Gottheit an. In diesem Dorf leben nur 10 christliche Familien.Akash Dehuri lebt als Ausgestoßener in diesem Dorf und gehört damit auch zu den besonders bedürftigen Kindern. Sein Vater ist Tagelöhner  und  hat  auch  nicht  immer  Arbeit.  Akashs  Bruder  ist  blind, dadurch hat es die Familie besonders schwer in diesem so feindseligen Umfeld zurechtzukommen.",
+        "hobbies": [
+          "hobby1",
+          "hobby2"
+        ],
+        "school": {
+          "name": "Schule Windhagen",
+          "location": "Haiti"
+        },
+        "information": "Cusandi re volo et, cusa que repe quod mod magnatatur, quibus volorepro ide nis sedis dipit, utem hit volorentium nus. Explici asperume eria poresequi undit ut voluptasit reprerum voluptas rehenim ag- nihilla nobis id quo mos et quaeribus mo veriam quas pore vendi omnitium utem iliquid modicipsant. Modit ipiendae quodis magnimi, vendigenim dendam vendem la- turibus ma nihilibero ipis dendicae lanis- simus sandandunt a di optat untiis unt. At poratius molori rem. Itatur rem et et face- pellabo. Soluptaque quae. Itis etur si con et aut vel molut ius, tendit debitat urerum qui audignis nonse vel il in comnis ipsuntem quundi cor ationsequati aped moluptis eost, que cus.Solupta cum nate quas- pidunt volless erspis prorum et faceri- bus debis site sit experio.",
         "pictures": [
             {
                 "url": "gfx/aside-img1.jpg",
@@ -19,21 +30,42 @@
                 "url": "gfx/aside-img2.jpg",
                 "figcaption": "Bildunterschrift 2"
             }
-        ]
+        ],
+        "pate": {
+          "name": "Wittmann",
+          "firstname": "Kai",
+          "gender": "male"
+        }
     },
     {
         "id": 1,
         "name": "name",
         "gender": "male",
         "birthday": "dd.mm.yyyy",
-        "nameFather": "name",
-        "nameMother": "name",
-        "siblings": "amount",
+        "family": [
+          "Peter Pan",
+          "Angela Merkel",
+          "Dieter",
+          "Susie"
+        ],
+        "school": {
+          "name": "Schule Windhagen",
+          "Ort": "Haiti"
+        },
+        "hobbies": [
+          "hobby1",
+          "hobby2"
+        ],
         "nationality": "nationality",
-        "avatar": "http://imageURL",
+        "avatar": "#",
         "information": "text",
         "pictures": [
 
-        ]
+        ],
+        "pate": {
+          "name": "Wittmann",
+          "firstname": "Kai",
+          "gender": "male"
+        }
     }
 ]

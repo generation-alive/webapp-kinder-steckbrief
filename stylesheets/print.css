@@ -1,6 +1,9 @@
 @import url("https://fonts.googleapis.com/css?family=Roboto:300,400,500,700");
 @import url("https://fonts.googleapis.com/css?family=Source+Sans+Pro:400,600");
+@import url("https://fonts.googleapis.com/css?family=Yantramanav:300,400");
+@import url("https://fonts.googleapis.com/css?family=Noticia+Text");
 @page {
+  size: A4;
   margin: 0;
 }
 @font-face {
@@ -15,54 +18,54 @@
   font-family: SintonyBold;
   src: url("../sass/font/Sintony-Bold.otf") format("opentype");
 }
-/* line 22, ../sass/print.sass */
+/* line 23, ../sass/print.sass */
 ul {
   margin: 0;
   padding: 0;
   list-style: none;
 }
 
-/* line 27, ../sass/print.sass */
+/* line 28, ../sass/print.sass */
 .inv-invoice {
   font-family: "ArmataRegular", sans-serif;
   color: #222;
 }
 
-/* line 31, ../sass/print.sass */
+/* line 32, ../sass/print.sass */
 .inv-invoice {
   overflow: auto;
   margin: 0;
 }
 
-/* line 35, ../sass/print.sass */
+/* line 36, ../sass/print.sass */
 .inv-invoice__paper {
   font-size: 12pt;
   overflow: auto;
   width: 21cm;
-  height: 29.7cm;
+  height: 29.7cm !important;
   background-color: #fff;
   padding: 1cm 0;
   box-sizing: border-box;
   position: relative;
-  padding: 1cm 2cm;
+  padding: 1cm 1.2cm;
 }
 
-/* line 46, ../sass/print.sass */
+/* line 47, ../sass/print.sass */
 .inv-list--right {
   text-align: right;
 }
 
-/* line 50, ../sass/print.sass */
+/* line 51, ../sass/print.sass */
 .inv-list--inline li {
   display: inline;
 }
 
-/* line 53, ../sass/print.sass */
+/* line 54, ../sass/print.sass */
 .inv-font--sm {
   font-size: 9pt;
 }
 
-/* line 57, ../sass/print.sass */
+/* line 58, ../sass/print.sass */
 .mark-top {
   left: 0;
   width: 0.4cm;
@@ -73,13 +76,13 @@ ul {
   margin-right: 0.5cm;
 }
 
-/* line 66, ../sass/print.sass */
+/* line 67, ../sass/print.sass */
 .mark--right {
   left: auto;
   right: 0;
 }
 
-/* line 70, ../sass/print.sass */
+/* line 71, ../sass/print.sass */
 .mark-mid {
   border-top: solid 1pt #999;
   width: 0.6cm;
@@ -88,161 +91,261 @@ ul {
   top: 50%;
 }
 
-/* line 77, ../sass/print.sass */
+/* line 78, ../sass/print.sass */
 .material-icons {
   vertical-align: middle;
 }
 
-/* line 80, ../sass/print.sass */
+/* line 81, ../sass/print.sass */
 .link-style {
   color: #ff7f94;
   font-weight: bold;
 }
 
 @media print {
-  /* line 85, ../sass/print.sass */
+  /* line 86, ../sass/print.sass */
   .inv-menu {
     display: none;
   }
 
-  /* line 87, ../sass/print.sass */
+  /* line 88, ../sass/print.sass */
   * {
     -webkit-print-color-adjust: exact;
     background-color: unset;
     color: unset;
   }
 
-  /* line 92, ../sass/print.sass */
+  /* line 93, ../sass/print.sass */
   .inv-invoice__paper {
     height: 100%;
   }
 }
-/* line 3, ../sass/_steckbrief.sass */
-h1 {
-  text-transform: uppercase;
-  font-weight: 500;
-  font-size: 25pt;
-  float: left;
+@font-face {
+  font-family: "FFADMatro";
+  src: url("../material/Schriften_Steckbrief/FFADMatro.ttf") format("truetype");
+}
+/* line 10, ../sass/_steckbriefV2.sass */
+.sb2-header {
+  width: 530.1pt;
+  height: 240.7pt;
+  background-size: 100% 100%;
+  background-image: url("../gfx/v2/header_background.png");
+  overflow: auto;
+  position: relative;
 }
 
-/* line 9, ../sass/_steckbrief.sass */
-h2 {
-  font-weight: normal;
-  padding-top: 12pt;
-  margin-bottom: 5pt;
-  color: #333;
-  font-size: 17pt;
+/* line 18, ../sass/_steckbriefV2.sass */
+.sb2-avatar {
+  margin-top: 0.7cm;
+  margin-left: 1cm;
 }
 
-/* line 16, ../sass/_steckbrief.sass */
-.sb-main, .sb-header {
-  overflow-x: auto;
-  box-sizing: border-box;
-  width: 100%;
-}
-
-/* line 21, ../sass/_steckbrief.sass */
-.sb-logo {
-  width: 4.5cm;
-  padding-right: 0.3cm;
-  float: right;
-}
-
-/* line 26, ../sass/_steckbrief.sass */
-.sb-table {
-  display: -webkit-flex;
-  display: flex;
-  border: solid 4pt #3F849D;
-  font-family: "SintonyRegular";
-  font-size: 11pt;
-  border-radius: 2pt;
-  color: #3F849D;
-}
-
-/* line 36, ../sass/_steckbrief.sass */
-.sb-table__left {
-  background-color: #3F849D;
-  color: #fff;
-  font-family: "SintonyBold";
-  width: 4cm;
-}
-
-/* line 42, ../sass/_steckbrief.sass */
-.sb-table__mid {
-  width: calc(100% - 9cm);
-  flex-basis: calc(100% - 9cm);
-}
-
-/* line 46, ../sass/_steckbrief.sass */
-.sb-table__right {
-  width: 5cm;
+/* line 22, ../sass/_steckbriefV2.sass */
+.sb2-avatar__img {
+  width: 144.8pt;
+  transform: rotate(-5.5deg);
   background-image: url("../gfx/err.jpg");
+  background-size: cover;
+  background-position: center center;
+  height: 199.1pt;
+  position: relative;
+}
+/* line 30, ../sass/_steckbriefV2.sass */
+.sb2-avatar__img::after {
+  display: block;
+  position: absolute;
+  content: "";
+  left: -0.25%;
+  top: -0.25%;
+  width: 100.5%;
+  height: 100.5%;
+  background-image: url("../gfx/v2/avatar_border.png");
   background-size: cover;
   background-position: center center;
 }
 
-/* line 53, ../sass/_steckbrief.sass */
-.sb-table__list {
-  margin: 6pt;
-  margin-right: 0;
-}
-/* line 56, ../sass/_steckbrief.sass */
-.sb-table__list li {
-  padding-right: 7pt;
-  padding-left: 3pt;
-  padding-bottom: 3pt;
-  padding-top: 8pt;
-  border-bottom: solid 2pt rgba(255, 255, 255, 0.8);
-}
-/* line 62, ../sass/_steckbrief.sass */
-.sb-table__list li:first-child {
-  padding-top: 4pt;
-}
-/* line 64, ../sass/_steckbrief.sass */
-.sb-table__list li:last-child {
-  border: none;
-  padding-bottom: 0;
+/* line 42, ../sass/_steckbriefV2.sass */
+.sb2-avatar__hefter {
+  position: absolute;
+  top: 0.2cm;
+  width: 1.2cm;
 }
 
-/* line 68, ../sass/_steckbrief.sass */
-.sb-table__list--mid {
-  margin-left: 0;
-}
-/* line 70, ../sass/_steckbrief.sass */
-.sb-table__list--mid li {
-  padding-left: 6pt;
-  border-color: rgba(63, 132, 157, 0.8);
+/* line 47, ../sass/_steckbriefV2.sass */
+.sb2-header__pfeil {
+  width: 2cm;
+  bottom: 0.7cm;
+  position: absolute;
+  left: 7cm;
 }
 
-/* line 74, ../sass/_steckbrief.sass */
-.sb-description {
-  width: calc(100% - 5cm - 3pt - 0.5cm);
+/* line 53, ../sass/_steckbriefV2.sass */
+.sb2-headlines {
+  position: absolute;
+  top: 1.3cm;
+  width: 10cm;
+  right: 1cm;
+  text-align: center;
+  font-family: "FFADMatro";
+  color: #fff;
+  height: 6cm;
+}
+/* line 64, ../sass/_steckbriefV2.sass */
+.sb2-headlines h1 {
+  margin: 0;
+  margin-top: 0.1cm;
+  font-size: 30pt;
+}
+/* line 69, ../sass/_steckbriefV2.sass */
+.sb2-headlines h2 {
+  padding: 0;
+  margin: 0;
+  font-size: 30pt;
+  color: #fff;
+  font-family: "FFADMatro";
+  line-height: 33pt;
+}
+/* line 77, ../sass/_steckbriefV2.sass */
+.sb2-headlines p {
+  margin: 0;
+  margin-bottom: 0.2cm;
+}
+/* line 81, ../sass/_steckbriefV2.sass */
+.sb2-headlines .introduction {
+  font-family: "Yantramanav";
+  font-weight: 300;
+  font-size: 16pt;
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+}
+
+/* line 90, ../sass/_steckbriefV2.sass */
+.sb2-main {
+  text-align: center;
+  position: relative;
+}
+/* line 93, ../sass/_steckbriefV2.sass */
+.sb2-main h3 {
+  width: 500pt;
+  font-family: "FFADMatro";
+  color: #576495;
+  font-size: 21pt;
+  line-height: 27pt;
+  margin-top: 1cm;
+}
+
+/* line 101, ../sass/_steckbriefV2.sass */
+.sb2-main__pen {
+  position: absolute;
+  width: 1.2cm;
+  left: -1.2cm;
+  top: -0.5cm;
+}
+
+/* line 107, ../sass/_steckbriefV2.sass */
+.sb2-main__content {
+  text-align: left;
+  font-size: 9.5pt;
+  padding-top: 20pt;
+  color: #576495;
+  position: relative;
+}
+
+/* line 114, ../sass/_steckbriefV2.sass */
+.sb2-main__steckbrief {
+  display: inline-block;
+  width: 144pt;
+  vertical-align: top;
+}
+
+/* line 119, ../sass/_steckbriefV2.sass */
+.sb2-main__story {
+  width: 210pt;
+  display: inline-block;
+}
+
+/* line 123, ../sass/_steckbriefV2.sass */
+.sb2-main__topic {
   font-size: 10pt;
-  line-height: 14pt;
-  color: #306579;
-  float: left;
+  margin: 0;
+  margin-bottom: 3pt;
+  font-weight: bold;
+}
+
+/* line 129, ../sass/_steckbriefV2.sass */
+.sb2-inline-data {
+  margin: 0;
+  margin-bottom: 13pt;
+  line-height: 12pt;
+  color: #727ead;
+}
+
+/* line 135, ../sass/_steckbriefV2.sass */
+.sb2-text {
+  margin: 0;
+  line-height: 12pt;
+  color: #727ead;
+  white-space: pre-line;
   text-align: justify;
 }
 
-/* line 82, ../sass/_steckbrief.sass */
-.sb-aside {
-  float: right;
-  width: 5cm;
-  padding-right: 2pt;
-  overflow: hidden;
+/* line 142, ../sass/_steckbriefV2.sass */
+.sb2-main__content-items {
+  width: 135.6pt;
+  position: absolute;
+  top: 0;
+  right: 0;
 }
 
-/* line 88, ../sass/_steckbrief.sass */
-.sb-aside__image {
+/* line 148, ../sass/_steckbriefV2.sass */
+.sb2-donations {
+  width: 140.1pt;
+  height: 128.1pt;
+  background-image: url("../gfx/v2/donate_background.png");
+  background-size: 100% 100%;
+  color: #fff;
+  text-align: left;
+  padding: 7pt 10pt;
+  font-size: 9pt;
+  position: absolute;
+  right: 1.5cm;
+  bottom: 3cm;
+  transform: rotate(16.5deg);
+}
+
+/* line 163, ../sass/_steckbriefV2.sass */
+.sb2-donations__headline {
+  font-family: "Noticia Text", serif;
+  font-size: 14pt;
+  font-weight: normal;
+  text-align: center;
   margin: 0;
-  margin-bottom: 1cm;
-  width: 100%;
+  margin-bottom: 10pt;
 }
-/* line 92, ../sass/_steckbrief.sass */
-.sb-aside__image img {
-  width: 100%;
+
+/* line 171, ../sass/_steckbriefV2.sass */
+.sb2-donations__mail {
+  display: block;
+  margin-bottom: 15pt;
 }
-/* line 95, ../sass/_steckbrief.sass */
-.sb-aside__image figcaption {
-  font-size: 8pt;
+
+/* line 175, ../sass/_steckbriefV2.sass */
+.sb2-donations__patenschaftsnummer {
+  display: block;
+  margin-bottom: 3pt;
+}
+
+/* line 179, ../sass/_steckbriefV2.sass */
+.sb2-footer {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  padding-bottom: 20pt;
+}
+
+/* line 186, ../sass/_steckbriefV2.sass */
+.sb2-footer__logo {
+  width: 100%;
 }
